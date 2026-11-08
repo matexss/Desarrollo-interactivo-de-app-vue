@@ -31,5 +31,10 @@ export const useTaskStore = defineStore('tasks', () => {
     tareas.value = tareas.value.filter(t => t.id !== id)
   }
 
-  return { tareas, cargando, cargarTareasAPI, agregarTarea, toggleTarea, eliminarTarea }
+  const editarTarea = (id, nuevoTitulo) => {
+    const tarea = tareas.value.find(t => t.id === id)
+    if (tarea) tarea.titulo = nuevoTitulo
+  }
+
+  return { tareas, cargando, cargarTareasAPI, agregarTarea, toggleTarea, eliminarTarea, editarTarea }
 })
