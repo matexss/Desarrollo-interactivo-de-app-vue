@@ -32,3 +32,10 @@ Para el estado global utilizamos Pinia, el estándar recomendado para Vue 3.
 - **Traer datos de internet (API):** Utilizamos la herramienta `fetch` para pedir información externa y guardarla en nuestro sistema (Pinia). Para que esto ocurra automáticamente, usamos `onMounted`, que es una instrucción que le dice a la aplicación: "descarga los datos en el mismo instante en que el usuario abra la pantalla principal".
 - **Problema que tuvimos (Obligatorio):** Al intentar descargar los datos desde el servicio externo `jsonplaceholder`, las tareas no aparecían en nuestra pantalla, a pesar de que el sistema sí las estaba recibiendo internamente.
 - **Cómo lo arreglamos:** Nos dimos cuenta de que la información de internet venía con etiquetas en inglés como `title` (título) y `completed` (completado), pero nuestra aplicación estaba esperando recibir las palabras en español como `titulo` y `completada`. Tuvimos que transformar y adaptar esa lista de datos antes de guardarla para que nuestra aplicación pudiera leerla correctamente.
+
+## Bloque 6: Pruebas Unitarias
+Usamos **Vitest** y **Vue Test Utils** para asegurar la calidad de nuestros componentes, ya que vienen integrados de forma nativa al crear el proyecto con Vite.
+* **Configuración:** Tuvimos que configurar un entorno simulado para Pinia usando `setActivePinia(createPinia())` en el `beforeEach` y evitamos errores de enrutamiento inyectando `global: { stubs: ['RouterLink'] }`.
+* **Prueba 1:** Verifica que el título de la tarea se renderice correctamente pasándolo a través de las `props`.
+* **Prueba 2:** Comprueba que se aplique la clase CSS `.completada` de forma condicional si el estado de la tarea es true.
+* **Prueba 3:** Valida que el botón de eliminar exista y tenga el texto correcto en la interfaz.
