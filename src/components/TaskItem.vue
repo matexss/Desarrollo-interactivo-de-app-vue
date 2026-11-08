@@ -1,17 +1,17 @@
 <script setup>
+import { useTaskStore } from '../stores/taskStore'
+const store = useTaskStore()
+
 defineProps({
-  tarea: {
-    type: Object,
-    required: true
-  }
+  tarea: { type: Object, required: true }
 })
 </script>
 
 <template>
   <div class="task-item">
-    <input type="checkbox" :checked="tarea.completada" />
+    <input type="checkbox" :checked="tarea.completada" @change="store.toggleTarea(tarea.id)" />
     <span :class="{ completada: tarea.completada }">{{ tarea.titulo }}</span>
-    <button>Eliminar</button>
+    <button @click="store.eliminarTarea(tarea.id)">Eliminar</button>
   </div>
 </template>
 
