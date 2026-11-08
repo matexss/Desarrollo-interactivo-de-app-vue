@@ -14,37 +14,7 @@ defineProps({
     
     <div class="acciones">
       <RouterLink :to="`/tarea/${tarea.id}`" class="btn-detalle">Ver</RouterLink>
-      <button @click="store.eliminarTarea(tarea.id)">Eliminar</button>
+      <button class="btn-eliminar" @click="store.eliminarTarea(tarea.id)">Eliminar</button>
     </div>
   </div>
 </template>
-
-<style scoped>
-.task-item { 
-  border: 1px solid #ccc; 
-  padding: 10px; 
-  margin-bottom: 5px; 
-  display: flex; 
-  gap: 10px; 
-  align-items: center;
-}
-.completada { 
-  text-decoration: line-through; 
-  color: gray; 
-}
-.acciones {
-  margin-left: auto; /* Empuja los botones a la derecha */
-  display: flex;
-  gap: 5px;
-}
-
-.btn-detalle { 
-  background: #e0e0e0; 
-  padding: 2px 6px; 
-  text-decoration: none; 
-  color: black; 
-  border-radius: 4px;
-  font-size: 13px;
-  border: 1px solid #ccc;
-}
-</style>

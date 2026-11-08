@@ -19,8 +19,3 @@ const submitTarea = () => {
     <button type="submit">Agregar</button>
   </form>
 </template>
-
-<style scoped>
-.task-form { margin-bottom: 20px; display: flex; gap: 10px; }
-input { flex: 1; padding: 8px; }
-</style>

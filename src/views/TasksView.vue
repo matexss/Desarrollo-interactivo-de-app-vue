@@ -33,8 +33,3 @@ const tareasFiltradas = computed(() => {
     <TaskList v-else :tareas="tareasFiltradas" />
   </main>
 </template>
-
-<style scoped>
-.container { max-width: 600px; margin: 0 auto; padding: 20px; }
-.filtros { display: flex; gap: 10px; margin-bottom: 20px; }
-</style>

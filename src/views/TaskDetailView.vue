@@ -26,9 +26,3 @@ const tarea = computed(() => {
     </div>
   </main>
 </template>
-
-<style scoped>
-.container { max-width: 600px; margin: 20px auto; padding: 20px; }
-.detalle { border: 1px solid #ccc; padding: 20px; margin-top: 20px; border-radius: 8px; }
-button { padding: 8px 12px; cursor: pointer; }
-</style>
