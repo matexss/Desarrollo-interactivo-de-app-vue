@@ -39,3 +39,25 @@ Usamos **Vitest** y **Vue Test Utils** para asegurar la calidad de nuestros comp
 * **Prueba 1:** Verifica que el título de la tarea se renderice correctamente pasándolo a través de las `props`.
 * **Prueba 2:** Comprueba que se aplique la clase CSS `.completada` de forma condicional si el estado de la tarea es true.
 * **Prueba 3:** Valida que el botón de eliminar exista y tenga el texto correcto en la interfaz.
+
+## Bloque 7: Ecosistema y Despliegue
+* **Ecosistema:** Utilizamos Vite como herramienta de construcción (muy superior en velocidad a Vue CLI) y Vue Router para el manejo de vistas. 
+* **Despliegue:** Elegimos **Netlify** para el alojamiento. En lugar de subir los archivos manualmente, conectamos nuestro repositorio de GitHub directamente a Netlify. Esto configuró un flujo de despliegue continuo (CI/CD) donde Netlify ejecuta el comando `npm run build` en sus servidores automáticamente con cada nuevo commit.
+* **Enlace público:** [https://rainbow-biscuit-75c936.netlify.app/]
+
+## Tabla de Mediciones
+
+| Métrica | Resultado | Cómo lo medimos |
+| :--- | :--- | :--- |
+| Tiempo de configuración inicial | **10** minutos | Medido con cronómetro desde el `npm create vite` hasta ver el "Hola Mundo". |
+| Líneas de código (LOC) | **355** líneas | Usamos el comando `npx cloc src` en la terminal. |
+| Tamaño del build de producción | **102.96** KB | Revisamos el peso de la carpeta `dist` tras ejecutar `npm run build` localmente. |
+| Rendimiento Lighthouse (Móvil) | **91** / 100 | Usamos Chrome DevTools en la URL pública de Netlify. |
+| Horas totales del grupo | **15** horas | Sumatoria de horas de los 3 integrantes. |
+| Dificultad percibida | 5 / 5 | Promedio dialogado en el grupo. |
+
+## Uso de IA y NotebookLM
+Durante el desarrollo del proyecto utilizamos inteligencia artificial (Gemini) como apoyo de estudio bajo los parámetros permitidos:
+* **Resolución de errores:** La usamos para entender el error `"vitest" no se reconoce como comando` provocado por la falta de la carpeta `node_modules` y problemas de versión en Node.js.
+* **Explicación de conceptos:** Le pedimos que nos explicara cómo evitar el desbordamiento de elementos en CSS responsive (uso de `box-sizing: border-box` y `flex-wrap`).
+* **NotebookLM:** [https://notebook.google.com/notebook/57d3b8ba-a38a-4e24-9d5f-68f28e205ab2?utm_source=gemini_notebook&utm_medium=referral]
