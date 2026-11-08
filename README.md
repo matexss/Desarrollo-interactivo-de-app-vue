@@ -1,50 +1,12 @@
-# gestion_tareas
+# Gestor de Tareas - Grupo 3 (Vue)
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Bloque 1: Panorama
+* **Origen y creador:** Fue creado en 2014 por Evan You, quien buscaba tomar las mejores ideas de Angular pero haciendo una herramienta mucho más ligera y fácil de aprender.
+* **Versión actual:** La versión más moderna es Vue 3, la cual trajo una nueva forma de escribir código (Composition API) para hacerlo más ordenado y rápido.
+* **Licencia:** Utiliza la licencia MIT, lo que significa que es totalmente gratis, de código abierto y lo puedes usar para cualquier proyecto, ya sea de la universidad o para vender.
+* **Filosofía:** Es un "framework progresivo", es decir, se adapta a ti: puedes usarlo solo para darle interactividad a un botón de tu página, o sumarle más herramientas oficiales para armar aplicaciones gigantes.
+## Bloque 2: Instalación
+Creamos el proyecto usando Vite (`npm create vue@latest`). La estructura generada separa el código fuente en `src/`, donde tenemos `components/` para la UI, `views/` para las páginas, y `stores/` para el estado global.
+ 
+**Error encontrado:** Al borrar los componentes de ejemplo, la consola dio error porque `router/index.js` seguía buscando las vistas viejas.
+**Solución:** Limpiamos las importaciones en el router y dejamos el `App.vue` solo con un `<RouterView />`.
